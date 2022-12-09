@@ -186,9 +186,25 @@ MarkupSafe = ">=2.0"
 i18n = ["Babel (>=2.7)"]
 
 [[package]]
+name = "madpython"
+version = "1.0.0"
+description = "A simple printer of day2 lists"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "markupsafe"
 version = "2.1.1"
 description = "Safely add untrusted strings to HTML/XML markup."
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
+name = "more-itertools"
+version = "9.0.0"
+description = "More routines for operating on iterables, beyond itertools"
 category = "main"
 optional = false
 python-versions = ">=3.7"
@@ -478,7 +494,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.8.0,<3.9"
-content-hash = "f328c469a46d9cb95c79b10c69318f07ccca3f40cc6eb43ef51c87ad2ff1879b"
+content-hash = "9542446212c710cae31bddafcdb9e8acd42597be613b57af684af1d600bbb7eb"
 
 [metadata.files]
 aiohttp = []
@@ -497,7 +513,9 @@ importlib-metadata = []
 itsdangerous = []
 jedi = []
 jinja2 = []
+madpython = []
 markupsafe = []
+more-itertools = []
 multidict = []
 numpy = []
 packaging = []
