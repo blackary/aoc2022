@@ -18,51 +18,51 @@ C Z""".splitlines()
 
 
 def get_winner(me_play: str, them_play: str) -> int:
-  if me_play == them_play:
-    return 3
+    if me_play == them_play:
+        return 3
 
-  if me_play == ROCK:
-    if them_play == PAPER:
-      return 0
-    elif them_play == SCISSORS:
-      return 6
+    if me_play == ROCK:
+        if them_play == PAPER:
+            return 0
+        elif them_play == SCISSORS:
+            return 6
 
-  if me_play == PAPER:
-    if them_play == ROCK:
-      return 6
-    elif them_play == SCISSORS:
-      return 0
+    if me_play == PAPER:
+        if them_play == ROCK:
+            return 6
+        elif them_play == SCISSORS:
+            return 0
 
-  if me_play == SCISSORS:
-    if them_play == ROCK:
-      return 0
-    elif them_play == PAPER:
-      return 6
+    if me_play == SCISSORS:
+        if them_play == ROCK:
+            return 0
+        elif them_play == PAPER:
+            return 6
 
 
 def get_score(me_letter: str, them_letter: str) -> int:
-  score = 0
-  me_play = ME[me_letter]
-  them_play = THEM[them_letter]
-  if me_play == ROCK:
-    score = 1
-  elif me_play == PAPER:
-    score = 2
-  elif me_play == SCISSORS:
-    score = 3
+    score = 0
+    me_play = ME[me_letter]
+    them_play = THEM[them_letter]
+    if me_play == ROCK:
+        score = 1
+    elif me_play == PAPER:
+        score = 2
+    elif me_play == SCISSORS:
+        score = 3
 
-  score += get_winner(me_play, them_play)
+    score += get_winner(me_play, them_play)
 
-  return score
+    return score
 
 
 def get_total_score(input_lines) -> int:
-  my_score = 0
-  for line in input_lines:
-    them_letter, me_letter = line.split(" ")
-    my_score += get_score(me_letter, them_letter)
-    # print(line, my_score)
-  return my_score
+    my_score = 0
+    for line in input_lines:
+        them_letter, me_letter = line.split(" ")
+        my_score += get_score(me_letter, them_letter)
+        # print(line, my_score)
+    return my_score
 
 
 assert get_total_score(test_inputs) == 15

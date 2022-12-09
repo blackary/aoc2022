@@ -3,10 +3,11 @@ from pathlib import Path
 
 def count_start(datastream: str, n_chars: int = 4) -> int:
     for idx in range(len(datastream) - n_chars):
-        chars = datastream[idx:idx + n_chars]
+        chars = datastream[idx : idx + n_chars]
         if len(set(chars)) == n_chars:
             return idx + n_chars
     raise ValueError("No start found")
+
 
 assert count_start("mjqjpqmgbljsphdztnvjfqwrcgsmlb") == 7
 assert count_start("bvwbjplbgvbhsrlpgdmjqwftvncz") == 5

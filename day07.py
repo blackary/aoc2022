@@ -71,6 +71,7 @@ def get_directories(raw_input: str) -> Directory:
 
     return base_dir
 
+
 def small_dirs(base_dir: Directory) -> int:
     return sum(
         dir.total_file_size
@@ -116,12 +117,14 @@ print(small_dirs(base_dir))
 
 TOTAL_SIZE = 70_000_000
 
+
 def get_smallest_dir(base_dir: Directory, min_size: int = 30_000_000) -> int:
     all_dirs = get_all_dirs(base_dir)
     remaining_size = TOTAL_SIZE - base_dir.total_file_size
     dirs = [d for d in all_dirs if (remaining_size + d.total_file_size) >= min_size]
     dirs.sort(key=lambda dir: dir.total_file_size)
     return dirs[0].total_file_size
+
 
 assert get_smallest_dir(sample_base_dir) == 24933642
 
