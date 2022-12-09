@@ -1,1 +1,3 @@
-import day03
+from __future__ import annotations
+
+import day05
