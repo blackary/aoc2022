@@ -82,6 +82,7 @@ assert get_viewing_score(1, 2, tree_lists) == 4
 
 assert get_viewing_score(3, 2, tree_lists) == 8
 
+
 def get_max_viewing_score(trees: str) -> int:
     tree_lists = [list(map(int, tree)) for tree in trees.splitlines()]
 
@@ -90,6 +91,7 @@ def get_max_viewing_score(trees: str) -> int:
         for i in range(len(tree_lists))
         for j in range(len(tree_lists[i]))
     )
+
 
 assert get_max_viewing_score(sample_trees) == 8
 
